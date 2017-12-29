@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Form/Button With some emoji 1`] = `
+<button
+  className="sc-bdVaJa iHOmPw"
+  onClick={[Function]}
+>
+  😀 😎 👍 💯
+</button>
+`;
+
+exports[`Storyshots Form/Button With text 1`] = `
+<button
+  className="sc-bdVaJa iHOmPw"
+  onClick={[Function]}
+>
+  Text
+</button>
+`;
