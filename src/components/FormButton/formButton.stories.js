@@ -5,6 +5,7 @@ import { linkTo } from '@storybook/addon-links';
 import { decorateAction } from '@storybook/addon-actions';
 import FormButton from './index';
 
+
 const onFormButtonEmajiClick = decorateAction([
     () => [{foo: 'bar'}]
 ])

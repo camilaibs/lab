@@ -2,17 +2,17 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const FormButton = styled.button`
-    color: white;
+    color: ${({ theme }) => theme.secondary};
     font-size: 1rem;
     padding: 0.5em 1rem;
     margin: 0;
-    background: palevioletred;
-    border: 2px solid palevioletred;
+    background: ${({ theme }) => theme.primary};
+    border: 2px solid ${({ theme }) => theme.primary};
     border-radius: 3px;
 
     ${({ secondary }) => secondary && css`
-        color: palevioletred;
-        background: transparent;
+        color: ${({ theme }) => theme.primary};
+        background: ${({ theme }) => theme.secondary};
     `}
 `;
 
