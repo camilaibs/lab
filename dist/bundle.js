@@ -20045,6 +20045,8 @@ var _utils2 = _interopRequireDefault(_utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+console.log('theme', _styledTheming2.default);
+
 var App = function App() {
     return _react2.default.createElement(
         _styledComponents.ThemeProvider,
