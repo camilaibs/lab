@@ -4,10 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import theme from 'styled-theming';
 import utils from '../../utils';
 
-console.log('theme', theme);
+theme('mode', utils.theme);
 
 const App = () => (
-    <ThemeProvider theme={theme('mode', utils.theme)}>
+    <ThemeProvider theme={utils.theme}>
         <React.Fragment>
             <FormButton>Form button</FormButton>
             <br />

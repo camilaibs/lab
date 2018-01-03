@@ -1,10 +1,22 @@
-const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        vendor: [
+            'react'
+        ]
+    },
+    output: {
+        filename: '[name].[chunkhash].js',
+        path: path.resolve(__dirname, 'dist')
+    },
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     },
     module: {
         rules: [
@@ -34,17 +46,25 @@ module.exports = {
             }
         ]
     },
+    devtool: 'inline-source-map',
     plugins: [
+        // new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             inject: false,
             template: require('html-webpack-template'),
+            minify: {
+                collapseWhitespace: true
+            },
             lang: 'pt-BR',
             title: 'Lab',
             bodyHtmlSnippet: '<div id="root"></div>',
-        })
-    ],
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    }
+        }),
+        new webpack.HashedModuleIdsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest'
+        }),
+    ]
 };
