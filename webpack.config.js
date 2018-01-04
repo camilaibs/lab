@@ -15,8 +15,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        contentBase: './dist',
-        hot: true
+        contentBase: './dist'
     },
     module: {
         rules: [
@@ -48,7 +47,7 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     plugins: [
-        // new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             inject: false,
             template: require('html-webpack-template'),

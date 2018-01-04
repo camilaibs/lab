@@ -1,6 +1,8 @@
 export default {
-    theme: {
-        primary: 'palevioletred',
-        secondary: 'white' 
+    themes: {
+        main: {
+            primary: 'palevioletred',
+            secondary: 'white' 
+        }
     }
 }
