@@ -1,11 +1,14 @@
 import React from 'react';
 import FormButton from '../FormButton';
+import Counter from '../Counter';
 
-const App = () => (
+const App = ({ store }) => (
     <React.Fragment>
         <FormButton>Text</FormButton>
         <br /><br />
         <FormButton secondary>Text</FormButton>
+        <br /><br />
+        <Counter store={store} />
     </React.Fragment>
 );
 

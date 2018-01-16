@@ -1,0 +1,22 @@
+.input-counter {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.input-counter__output {
+    text-align: center;
+    width: 2rem;
+    margin-left: -1px; 
+    margin-right: -1px; 
+}
+
+.input-counter__control:first-of-type {
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
+.input-counter__control:last-of-type {
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
