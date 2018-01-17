@@ -13,7 +13,7 @@ export default class Counter extends React.Component {
 
     componentDidMount() {
         this.props.store.subscribe(() => {
-            this.setState({counter: this.props.store.getState()});
+            this.setState({counter: this.props.store.getState().counter});
         });
     }
 
